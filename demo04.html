@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- from表示表单作用域，按钮作用于当前表单 -->
+    <form action="">
+
+        <!-- placeholder表示占位符 -->
+        文本框: <input type="text" placeholder="请输入用户名">
+        <br>
+        密码框: <input type="password" placeholder="请输入密码">
+        <br>
+
+        <!-- checked代表默认选中 name为单选 -->
+        <!-- label标签可增大点击范围，以下为两种写法 -->
+        gender:
+        <input type="radio" name="gender" id="male"> <label for="male">male</label>
+        <label><input type="radio" name="gender">female</label>
+        <br>
+        多选框:
+        <input type="checkbox"> html
+        <input type="checkbox"> css
+        <input type="checkbox"> javascript
+        <br>
+        上传文件: <input type="file" multiple>
+        <br>
+
+        <!-- 下拉菜单 -->
+        city:
+        <select>
+            <option>shanghai</option>
+            <option>guangzhou</option>
+            <option selected>amoy</option>
+        </select>
+        <br><br>
+
+        <!-- 文本域 -->
+        <textarea>请输入评论</textarea>
+        <br>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+    </form>
+
+    <div>独占</div>
+    <div>独占</div>
+    <span>不独占</span>
+    <span>不独占</span>
+
+    <!-- 分别表示空格 小于 大于 -->
+    空&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格
+    &lt;p&gt;
+
+
+</body>
+
+</html>
