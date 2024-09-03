@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>css类选择器和文字样式修改</title>
     <style>
         .myclass {
             color: red;
@@ -20,7 +20,29 @@
 
         * {
             color: black;
+            color: rgb(red, green, blue);
             font-size: 20px;
+            /* 700为加租 400为正常 */
+            font-weight: 400;
+            /* 倾斜 */
+            /* font-style: italic; */
+
+            line-height: 40px;
+            /* line-height: 2; 
+            含义是当前font-size乘倍数
+            */
+            font-family: Microsoft Yahei;
+            /* 首行缩进em表示为当前字号大小 */
+            text-indent: 2em;
+            /* 对齐方式 默认为左对齐 center right */
+            text-align: left;
+
+            /* 分别代表删除线 下划线 上划线 空 */
+            text-decoration: line-through;
+            text-decoration: underline;
+            text-decoration: overline;
+            text-decoration: none;
+
         }
 
         .red {
@@ -34,6 +56,23 @@
             height: 200px;
             background-color: orange;
         }
+
+        .middle {
+            /* 单行垂直居中 */
+            height: 100px;
+            background-color: aquamarine;
+            line-height: 100px;
+        }
+
+        .fontTest {
+            /* 必须按顺序书写，字号和字体必须写，否则font复合属性不生效 */
+            font: italic 700 30px/2 楷体;
+        }
+
+        h1 {
+            background-color: aqua;
+            color: rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
@@ -45,6 +84,14 @@
     <div>ti=</div>
     <div class="red">盒子1</div>
     <div class="orange">盒子2</div>
+    <p class="middle">
+        Unity Android 进阶之 【Android 添加一个启动动画】在Unity场景加载完之前，避免 【Unity 启动界面慢 黑屏时间长】的情况，
+        Unity 功能 之 创建 【Unity Package】 Manager 自定义管理的包使用配置URL，使用 git URL加载的简单整理，
+        Python 【机器学习】 进阶 之 【实战案例】MNIST手写数字分类处理 之 [ ROC 曲线 ] [ 多类分类 ] [ 误差分析 ] [ 多标签分类 ] |
+    </p>
+    <br>
+    <div class="fontTest">复合font属性测试</div>
+    <h1>透明</h1>
 </body>
 
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 这是并集选择器 */
+        div,
+        p,
+        span {
+            color: red;
+        }
+
+        /* 这是后代选择器 */
+        div span {
+            color: gold;
+        }
+
+        /* 这是子代选择器 */
+        div>span {
+            color: green;
+        }
+
+        /* 超链接有四个状态 :link :visited :hover :active */
+        /* 访问前/访问后/鼠标悬停/点击时(激活) 必须按LVHA的顺序写*/
+        a:link {
+            color: green;
+        }
+
+        a:visited {
+            color: pink;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+
+        .box:hover {
+            color: beige;
+        }
+
+
+        /* 背景图平铺方式 */
+        .imagebox {
+            width: 800px;
+            height: 800px;
+
+            display: block;
+            /* 默认为repeat repeat-x水平方向 repeat-y数值方向 */
+            background-repeat: no-repeat;
+            background-color: pink;
+            /* 方位可为center/right/left top/bottom */
+            /* 方位也可为坐标 */
+            background-position: center bottom;
+
+            /* 可为cover/contain/100% */
+            background-size: contain;
+
+            /* 固定图片不随滚动条移动 */
+            /* background-attachment: fixed; */
+            background-image: url(https://tse3-mm.cn.bing.net/th/id/OIP-C.vCKUN_1N1USNSVQrZ1IP1gHaE6?w=292&h=194&c=7&r=0&o=5&dpr=1.5&pid=1.7)
+        }
+
+
+        /* 复合写法 顺序如下 */
+        .imagebox2 {
+            width: 500px;
+            height: 500px;
+            background: pink url(https://tse3-mm.cn.bing.net/th/id/OIP-C.vCKUN_1N1USNSVQrZ1IP1gHaE6?w=292&h=194&c=7&r=0&o=5&dpr=1.5&pid=1.7) no-repeat right center/cover fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div>div</div>
+    <p>p</p>
+    <span>span</span>
+
+    <div>
+        <span>后代选择器</span>
+        <p>
+            <span>孙子</span>
+        </p>
+    </div>
+
+    <br>
+    <a href="#">link</a>
+    <div class="box">biaoqian</div>
+    <div class="imagebox"></div>
+    <br>
+    <span>biaoqian</span>
+    <div class="imagebox2">ee</div>
+
+
+</body>
+
+</html>

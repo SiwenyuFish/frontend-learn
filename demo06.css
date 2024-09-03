@@ -1,3 +1,6 @@
+/* css 三大属性继承 层峦 优先 */
+/*层峦 后面的css属性覆盖前面的css属性 不同的css属性都生效 */
+/*优先 通配符<标签选择器<标签<类<id<行内<important0 */
 p {
     color: gold;
     font-size: 100px;
