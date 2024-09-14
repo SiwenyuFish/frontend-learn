@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  relative是相对定位，元素的位置是相对其原本位置进行偏移，其不脱离文档流，
+            对于top、bottom、left、right、z-index属性的设置有效，设置偏移属性后会移动相对定位元素，
+            但它原本所占的空间不会改变，相对定位元素经常被用来作为绝对定位元素的容器块 */
+
+        .news {
+            position: relative;
+            margin: 100px auto;
+            width: 400px;
+            height: 350px;
+            background-color: #fff;
+        }
+
+        /*  absolute是绝对定位，元素的位置相对于最近的已定位父元素，
+        如果元素没有已定位的父元素，那么它的位置相对于<html>，
+        通常的使用方案是在外层嵌套一层relative相对定位元素作为父元素，再设置绝对定位元素的偏移将会相对于外层的relative元素进行偏移，
+        绝对定位完全脱离文档流与文本流，不占据文档空间，对于top、bottom、left、right、z-index属性的设置有效。
+
+            fixed是固定定位，元素的位置相对于浏览器窗口是固定位置，即使是窗口滚动元素也不会移动，
+        注意在<iframe>中的元素使用fixed是相对于<iframe>进行定位的，<iframe>类似于在页面中创建了一个新的浏览器窗口，
+        固定定位完全脱离文档流与文本流，不占据文档空间，对于top、bottom、left、right、z-index属性的设置有效。*/
+
+        .news span {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: block;
+            width: 92px;
+            height: 32px;
+            background-color: black;
+            text-align: center;
+            line-height: 32px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <img src="./imgs/photomode_14122023_211834.png" alt="404" width="480" height="270">
+        <span>展会</span>
+        <h4>大会</h4>
+    </div>
+
+</body>
+
+</html>

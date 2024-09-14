@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            display: flex;
+
+            /* flex-wrap属性决定当轴线方向放不下成员时，是否换行，取值为nowrap | wrap | wrap-reverse
+                nowrap默认：不换行，当空间不足时，会按轴线方向成员大小比例缩小的成员。
+                wrap：距离不够时换行，新起一行排列。
+                wrap-reverse：距离不够时换行，新起的一行在上方 */
+
+            flex-wrap: wrap;
+
+            /*  flex-direction属性决定主轴的方向，
+                取值为row | row-reverse | column | column-reverse
+                row默认值：主轴为水平方向，起点在左端。
+                row-reverse：主轴为水平方向，起点在右端，容器成员顺序与row顺序相反。
+                column：主轴为垂直方向，起点在上沿。
+                column-reverse：主轴为垂直方向，起点在下沿，容器成员顺序与column顺序相反*/
+
+            flex-direction: column;
+
+            /*  justify-content属性定义了成员在主轴上的对齐方式，可以很容易地实现多种布局，
+                取值为flex-start | flex-end | center | space-between | space-around
+                flex-start默认值：左对齐。
+                flex-end：右对齐。
+                center： 居中对齐。
+                space-between：两端对齐，成员之间的间隔都相等。
+                space-around：每个成员两侧的间隔相等，成员之间的间隔比成员与边框的间隔大一倍。 */
+
+            justify-content: space-between;
+
+            /*  align-items属性定义成员在交叉轴上如何对齐，
+                取值为flex-start | flex-end | center | baseline | stretch。
+                stretch默认值：如果成员未设置高度或设为auto，将占满整个容器的高度。
+                flex-start：交叉轴的起点对齐。
+                flex-end：交叉轴的终点对齐。
+                center：交叉轴的中点对齐。
+                baseline: 成员的第一行文字的基线对齐。 */
+
+            align-items: flex-end;
+
+            /*  align-content属性定义了多根轴线的对齐方式。如果成员只有一根轴线，该属性不起作用，取值为flex-start | flex-end | center | space-between | space-around | stretch
+                stretch默认值：轴线占满整个交叉轴。
+                flex-start：与交叉轴的起点对齐。
+                flex-end：与交叉轴的终点对齐。
+                center：与交叉轴的中点对齐。
+                space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+                space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。 */
+
+            align-content: space-around;
+
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        /* 第二个div，侧轴居中对齐 */
+        .box div:nth-child(2) {
+            align-self: center;
+        }
+
+
+        .box div {
+            width: 200px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+</body>
+
+</html>

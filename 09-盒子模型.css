@@ -26,6 +26,14 @@ div {
 
     /* 内减模式 加border和padding不会撑大盒子 */
     box-sizing: border-box;
+
+    /* hidden 溢出隐藏 scroll 溢出滚动  auto 溢出滚动 只有溢出才显示滚动条 */
+    overflow: hidden;
+    overflow: scroll;
+
+    border-radius: 20px;
+    /* 从左上角开始顺时针赋值 */
+    border-radius: 10px 20px 20px 20px;
 }
 
 /* 去除h1的默认内外边距 */
